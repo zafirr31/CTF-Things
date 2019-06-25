@@ -8,7 +8,7 @@ I realized that there is a busybox binary, that could probably give me more bina
 
 ![](images/1.png)
 
-I fiddled around at it turns out `setpriv --nnp` gives us uid 0 (which somehow isnt root (?) ), this is intereting because maybe uid 0 has more ownership in the shell.
+I fiddled around at it turns out `setpriv --nnp` gives us uid 0 (which somehow isnt root (?) ), this is interesting because maybe uid 0 has more ownership in the shell.
 
 Also it turns out with `setpriv /bin/busybox` I can run the binaries in busybox, such as cat, less, etc. But with this im still uid 1338. 
 

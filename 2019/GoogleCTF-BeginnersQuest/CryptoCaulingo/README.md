@@ -12,13 +12,13 @@ I started scribbling on a paper how to do it, and quickly thought of fermat fact
 
 ##### How?
 
-So basically I would brute force A and B, and do fermat factorization on N\*A\*B. Why? Because N = P\*Q so N\*A\*B = P\*A\*Q\*B. and since abs(P\*A - Q\*B) <= 10000, fermat __should__ work like a charm.
+So basically I would brute force A and B, and do fermat factorization on N\*A\*B. Why? Because N = P\*Q so N\*A\*B = P\*A\*Q\*B. and since abs(P\*A - Q\*B) <= 10000, fermat *should* work like a charm.
 
 #### Boy was i wrong
 
 It took about 10 minutes to run, and to my surprise it didnt find factors :(
 
-I starting trying to fix maybe integer sqrt function, maybe fermat function, it just didnt work. So I decided to sleep and the next day I had an idea that __maybe__ increasing the range of A and B could work.
+I starting trying to fix maybe integer sqrt function, maybe fermat function, it just didnt work. So I decided to sleep and the next day I had an idea that *maybe* increasing the range of A and B could work.
 
 To make a long story short, it did.
 
