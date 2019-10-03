@@ -1,0 +1,378 @@
+type=DAEMON_START msg=audit(1567678930.784:9265): op=start ver=2.8.2 format=raw kernel=4.15.0-46-generic auid=4294967295 pid=20696 uid=0 ses=4294967295 subj=unconfined  res=success
+type=CONFIG_CHANGE msg=audit(1567678930.798:24): audit_backlog_limit=8192 old=64 auid=4294967295 ses=4294967295 res=1
+type=CONFIG_CHANGE msg=audit(1567678930.798:25): audit_failure=1 old=1 auid=4294967295 ses=4294967295 res=1
+type=CONFIG_CHANGE msg=audit(1567678930.798:26): audit_backlog_wait_time=0 old=15000 auid=4294967295 ses=4294967295 res=1
+type=SERVICE_START msg=audit(1567678930.802:27): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=auditd comm="systemd" exe="/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+type=USER_END msg=audit(1567678933.798:28): pid=20344 uid=0 auid=1000 ses=3 msg='op=PAM:session_close acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+type=CRED_DISP msg=audit(1567678933.798:29): pid=20344 uid=0 auid=1000 ses=3 msg='op=PAM:setcred acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+type=USER_CMD msg=audit(1567678967.926:30): pid=21048 uid=1000 auid=1000 ses=3 msg='cwd="/home/vagrant" cmd="su" terminal=pts/0 res=success'
+type=CRED_REFR msg=audit(1567678967.926:31): pid=21048 uid=0 auid=1000 ses=3 msg='op=PAM:setcred acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+type=USER_START msg=audit(1567678967.926:32): pid=21048 uid=0 auid=1000 ses=3 msg='op=PAM:session_open acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+type=USER_AUTH msg=audit(1567678967.934:33): pid=21049 uid=0 auid=1000 ses=3 msg='op=PAM:authentication acct="root" exe="/bin/su" hostname=? addr=? terminal=/dev/pts/0 res=success'
+type=USER_ACCT msg=audit(1567678967.934:34): pid=21049 uid=0 auid=1000 ses=3 msg='op=PAM:accounting acct="root" exe="/bin/su" hostname=? addr=? terminal=/dev/pts/0 res=success'
+type=CRED_ACQ msg=audit(1567678967.938:35): pid=21049 uid=0 auid=1000 ses=3 msg='op=PAM:setcred acct="root" exe="/bin/su" hostname=? addr=? terminal=/dev/pts/0 res=success'
+type=USER_START msg=audit(1567678967.938:36): pid=21049 uid=0 auid=1000 ses=3 msg='op=PAM:session_open acct="root" exe="/bin/su" hostname=? addr=? terminal=/dev/pts/0 res=success'
+type=USER_ROLE_CHANGE msg=audit(1567678967.942:37): pid=21050 uid=0 auid=1000 ses=3 msg='op=su acct="root" exe="/bin/su" hostname=localhost addr=127.0.0.1 terminal=/dev/pts/0 res=success'
+type=DAEMON_END msg=audit(1567679021.341:9266): op=terminate auid=0 pid=1 subj= res=success
+type=DAEMON_START msg=audit(1567679021.363:1731): op=start ver=2.8.2 format=raw kernel=4.15.0-46-generic auid=4294967295 pid=21083 uid=0 ses=4294967295 subj=unconfined  res=success
+type=CONFIG_CHANGE msg=audit(1567679021.362:42): audit_pid=21083 old=0 auid=4294967295 ses=4294967295 res=1
+type=CONFIG_CHANGE msg=audit(1567679021.394:43): audit_backlog_limit=8192 old=8192 auid=4294967295 ses=4294967295 res=1
+type=CONFIG_CHANGE msg=audit(1567679021.394:44): audit_failure=1 old=1 auid=4294967295 ses=4294967295 res=1
+type=CONFIG_CHANGE msg=audit(1567679021.394:45): audit_backlog_wait_time=0 old=0 auid=4294967295 ses=4294967295 res=1
+type=CONFIG_CHANGE msg=audit(1567679021.394:46): auid=4294967295 ses=4294967295 op=add_rule key="exec" list=4 res=1
+type=SERVICE_START msg=audit(1567679021.394:47): pid=1 uid=0 auid=4294967295 ses=4294967295 msg='unit=auditd comm="systemd" exe="/lib/systemd/systemd" hostname=? addr=? terminal=? res=success'
+type=SYSCALL msg=audit(1567679024.690:48): arch=c000003e syscall=59 success=yes exit=0 a0=5639089b04c0 a1=5639089b0540 a2=56390898a830 a3=563908974010 items=2 ppid=21050 pid=21119 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="auditctl" exe="/sbin/auditctl" key="exec"
+type=EXECVE msg=audit(1567679024.690:48): argc=2 a0="auditctl" a1="-l"
+type=CWD msg=audit(1567679024.690:48): cwd="/etc/audit/rules.d"
+type=PATH msg=audit(1567679024.690:48): item=0 name="/sbin/auditctl" inode=7510 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679024.690:48): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679024.690:48): proctitle=617564697463746C002D6C
+type=SYSCALL msg=audit(1567679037.522:49): arch=c000003e syscall=59 success=yes exit=0 a0=5639089b0690 a1=5639089b0710 a2=56390898a830 a3=563908974010 items=2 ppid=21050 pid=21122 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="cat" exe="/bin/cat" key="exec"
+type=EXECVE msg=audit(1567679037.522:49): argc=2 a0="cat" a1="audit.log"
+type=CWD msg=audit(1567679037.522:49): cwd="/var/log/audit"
+type=PATH msg=audit(1567679037.522:49): item=0 name="/bin/cat" inode=14 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679037.522:49): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679037.522:49): proctitle=6361740061756469742E6C6F67
+type=USER_END msg=audit(1567679088.702:50): pid=21049 uid=0 auid=1000 ses=3 msg='op=PAM:session_close acct="root" exe="/bin/su" hostname=? addr=? terminal=/dev/pts/0 res=success'
+type=CRED_DISP msg=audit(1567679088.702:51): pid=21049 uid=0 auid=1000 ses=3 msg='op=PAM:setcred acct="root" exe="/bin/su" hostname=? addr=? terminal=/dev/pts/0 res=success'
+type=USER_END msg=audit(1567679088.706:52): pid=21048 uid=0 auid=1000 ses=3 msg='op=PAM:session_close acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+type=CRED_DISP msg=audit(1567679088.706:53): pid=21048 uid=0 auid=1000 ses=3 msg='op=PAM:setcred acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+type=SYSCALL msg=audit(1567679099.430:54): arch=c000003e syscall=59 success=yes exit=0 a0=55c77f62a230 a1=55c77f6338a0 a2=55c77f501b20 a3=8 items=2 ppid=1881 pid=21123 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="ifconfig" exe="/sbin/ifconfig" key="exec"
+type=EXECVE msg=audit(1567679099.430:54): argc=1 a0="ifconfig"
+type=CWD msg=audit(1567679099.430:54): cwd="/home/vagrant"
+type=PATH msg=audit(1567679099.430:54): item=0 name="/sbin/ifconfig" inode=3962 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679099.430:54): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679099.430:54): proctitle="ifconfig"
+type=SYSCALL msg=audit(1567679157.118:55): arch=c000003e syscall=59 success=yes exit=0 a0=55c77f6318f0 a1=55c77f62c6e0 a2=55c77f501b20 a3=8 items=2 ppid=1881 pid=21124 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="find" exe="/usr/bin/find" key="exec"
+type=EXECVE msg=audit(1567679157.118:55): argc=2 a0="find" a1="."
+type=CWD msg=audit(1567679157.118:55): cwd="/"
+type=PATH msg=audit(1567679157.118:55): item=0 name="/usr/bin/find" inode=4096 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679157.118:55): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679157.118:55): proctitle=66696E64002E
+type=SYSCALL msg=audit(1567679157.754:56): arch=c000003e syscall=59 success=yes exit=0 a0=55a10e434390 a1=55a10e476590 a2=55a10e35be00 a3=7 items=2 ppid=1 pid=21125 auid=4294967295 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=(none) ses=4294967295 comm="mount" exe="/bin/mount" key="exec"
+type=EXECVE msg=audit(1567679157.754:56): argc=5 a0="/bin/mount" a1="binfmt_misc" a2="/proc/sys/fs/binfmt_misc" a3="-t" a4="binfmt_misc"
+type=CWD msg=audit(1567679157.754:56): cwd="/"
+type=PATH msg=audit(1567679157.754:56): item=0 name="/bin/mount" inode=99 dev=08:01 mode=0104755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679157.754:56): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679157.754:56): proctitle=2F62696E2F6D6F756E740062696E666D745F6D697363002F70726F632F7379732F66732F62696E666D745F6D697363002D740062696E666D745F6D697363
+type=SYSCALL msg=audit(1567679159.910:57): arch=c000003e syscall=59 success=yes exit=0 a0=55c77f5cc330 a1=55c77f6399d0 a2=55c77f501b20 a3=8 items=2 ppid=1881 pid=21135 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="ls" exe="/bin/ls" key="exec"
+type=EXECVE msg=audit(1567679159.910:57): argc=3 a0="ls" a1="--color=auto" a2="-alt"
+type=CWD msg=audit(1567679159.910:57): cwd="/"
+type=PATH msg=audit(1567679159.910:57): item=0 name="/bin/ls" inode=26 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679159.910:57): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679159.910:57): proctitle=6C73002D2D636F6C6F723D6175746F002D616C74
+type=SYSCALL msg=audit(1567679161.886:58): arch=c000003e syscall=59 success=yes exit=0 a0=55c77f62e4f0 a1=55c77f63bbe0 a2=55c77f501b20 a3=8 items=2 ppid=1881 pid=21136 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="ls" exe="/bin/ls" key="exec"
+type=EXECVE msg=audit(1567679161.886:58): argc=3 a0="ls" a1="--color=auto" a2="-alt"
+type=CWD msg=audit(1567679161.886:58): cwd="/etc"
+type=PATH msg=audit(1567679161.886:58): item=0 name="/bin/ls" inode=26 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679161.886:58): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679161.886:58): proctitle=6C73002D2D636F6C6F723D6175746F002D616C74
+type=SYSCALL msg=audit(1567679163.918:59): arch=c000003e syscall=59 success=yes exit=0 a0=55c77f4e9c90 a1=55c77f61a010 a2=55c77f501b20 a3=8 items=2 ppid=1881 pid=21137 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="cat" exe="/bin/cat" key="exec"
+type=EXECVE msg=audit(1567679163.918:59): argc=2 a0="cat" a1="/etc/passwd"
+type=CWD msg=audit(1567679163.918:59): cwd="/etc"
+type=PATH msg=audit(1567679163.918:59): item=0 name="/bin/cat" inode=14 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679163.918:59): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679163.918:59): proctitle=636174002F6574632F706173737764
+type=SYSCALL msg=audit(1567679251.582:60): arch=c000003e syscall=59 success=yes exit=0 a0=55c77f62efe0 a1=55c77f503df0 a2=55c77f501b20 a3=8 items=2 ppid=1881 pid=21138 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="python" exe="/usr/bin/python2.7" key="exec"
+type=EXECVE msg=audit(1567679251.582:60): argc=3 a0="python" a1="-c" a2=696D706F727420736F636B65742C73756270726F636573732C6F733B733D736F636B65742E736F636B657428736F636B65742E41465F494E45542C736F636B65742E534F434B5F53545245414D293B732E636F6E6E65637428282231302E302E302E31222C3132333429293B6F732E6475703228732E66696C656E6F28292C30293B206F732E6475703228732E66696C656E6F28292C31293B206F732E6475703228732E66696C656E6F28292C32293B703D73756270726F636573732E63616C6C285B222F62696E2F7368222C222D69225D293B
+type=CWD msg=audit(1567679251.582:60): cwd="/etc"
+type=PATH msg=audit(1567679251.582:60): item=0 name="/usr/bin/python" inode=1887 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679251.582:60): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679251.582:60): proctitle=707974686F6E002D6300696D706F727420736F636B65742C73756270726F636573732C6F733B733D736F636B65742E736F636B657428736F636B65742E41465F494E45542C736F636B65742E534F434B5F53545245414D293B732E636F6E6E65637428282231302E302E302E31222C3132333429293B6F732E6475703228732E
+type=SYSCALL msg=audit(1567679338.694:61): arch=c000003e syscall=59 success=yes exit=0 a0=55c77f5d1b60 a1=55c77f4ff810 a2=55c77f501b20 a3=8 items=2 ppid=1881 pid=21140 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="nano" exe="/bin/nano" key="exec"
+type=EXECVE msg=audit(1567679338.694:61): argc=2 a0="nano" a1="exploit.c"
+type=CWD msg=audit(1567679338.694:61): cwd="/etc"
+type=PATH msg=audit(1567679338.694:61): item=0 name="/bin/nano" inode=165 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679338.694:61): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679338.694:61): proctitle=6E616E6F006578706C6F69742E63
+type=SYSCALL msg=audit(1567679435.802:62): arch=c000003e syscall=59 success=yes exit=0 a0=55c77f5a5810 a1=55c77f5e88c0 a2=55c77f501b20 a3=8 items=2 ppid=1881 pid=21141 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="nano" exe="/bin/nano" key="exec"
+type=EXECVE msg=audit(1567679435.802:62): argc=2 a0="nano" a1="exploit.c"
+type=CWD msg=audit(1567679435.802:62): cwd="/home/vagrant"
+type=PATH msg=audit(1567679435.802:62): item=0 name="/bin/nano" inode=165 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679435.802:62): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679435.802:62): proctitle=6E616E6F006578706C6F69742E63
+type=SYSCALL msg=audit(1567679445.114:63): arch=c000003e syscall=59 success=yes exit=0 a0=55c77f5ccbb0 a1=55c77f62aad0 a2=55c77f501b20 a3=8 items=2 ppid=1881 pid=21142 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="gcc" exe="/usr/bin/x86_64-linux-gnu-gcc-7" key="exec"
+type=EXECVE msg=audit(1567679445.114:63): argc=4 a0="gcc" a1="exploit.c" a2="-o" a3="exploit"
+type=CWD msg=audit(1567679445.114:63): cwd="/home/vagrant"
+type=PATH msg=audit(1567679445.114:63): item=0 name="/usr/bin/gcc" inode=7196 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679445.114:63): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679445.114:63): proctitle=676363006578706C6F69742E63002D6F006578706C6F6974
+type=SYSCALL msg=audit(1567679445.114:64): arch=c000003e syscall=59 success=yes exit=0 a0=bf7b70 a1=bfad08 a2=bfaf80 a3=3 items=2 ppid=21142 pid=21143 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="cc1" exe="/usr/lib/gcc/x86_64-linux-gnu/7/cc1" key="exec"
+type=EXECVE msg=audit(1567679445.114:64): argc=17 a0="/usr/lib/gcc/x86_64-linux-gnu/7/cc1" a1="-quiet" a2="-imultiarch" a3="x86_64-linux-gnu" a4="exploit.c" a5="-quiet" a6="-dumpbase" a7="exploit.c" a8="-mtune=generic" a9="-march=x86-64" a10="-auxbase" a11="exploit" a12="-fstack-protector-strong" a13="-Wformat" a14="-Wformat-security" a15="-o" a16="/tmp/ccK1vx9T.s"
+type=CWD msg=audit(1567679445.114:64): cwd="/home/vagrant"
+type=PATH msg=audit(1567679445.114:64): item=0 name="/usr/lib/gcc/x86_64-linux-gnu/7/cc1" inode=257814 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679445.114:64): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679445.114:64): proctitle=2F7573722F6C69622F6763632F7838365F36342D6C696E75782D676E752F372F636331002D7175696574002D696D756C746961726368007838365F36342D6C696E75782D676E75006578706C6F69742E63002D7175696574002D64756D7062617365006578706C6F69742E63002D6D74756E653D67656E65726963002D6D6172
+type=SYSCALL msg=audit(1567679445.154:65): arch=c000003e syscall=59 success=no exit=-2 a0=7fff54ca4460 a1=bfad08 a2=bfaf80 a3=3 items=1 ppid=21142 pid=21144 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="gcc" exe="/usr/bin/x86_64-linux-gnu-gcc-7" key="exec"
+type=CWD msg=audit(1567679445.154:65): cwd="/home/vagrant"
+type=PATH msg=audit(1567679445.154:65): item=0 name="/usr/local/sbin/as" nametype=UNKNOWN cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679445.154:65): proctitle=676363006578706C6F69742E63002D6F006578706C6F6974
+type=SYSCALL msg=audit(1567679445.154:66): arch=c000003e syscall=59 success=no exit=-2 a0=7fff54ca4460 a1=bfad08 a2=bfaf80 a3=3 items=1 ppid=21142 pid=21144 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="gcc" exe="/usr/bin/x86_64-linux-gnu-gcc-7" key="exec"
+type=CWD msg=audit(1567679445.154:66): cwd="/home/vagrant"
+type=PATH msg=audit(1567679445.154:66): item=0 name="/usr/local/bin/as" nametype=UNKNOWN cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679445.154:66): proctitle=676363006578706C6F69742E63002D6F006578706C6F6974
+type=SYSCALL msg=audit(1567679445.154:67): arch=c000003e syscall=59 success=no exit=-2 a0=7fff54ca4460 a1=bfad08 a2=bfaf80 a3=3 items=1 ppid=21142 pid=21144 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="gcc" exe="/usr/bin/x86_64-linux-gnu-gcc-7" key="exec"
+type=CWD msg=audit(1567679445.154:67): cwd="/home/vagrant"
+type=PATH msg=audit(1567679445.154:67): item=0 name="/usr/sbin/as" nametype=UNKNOWN cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679445.154:67): proctitle=676363006578706C6F69742E63002D6F006578706C6F6974
+type=SYSCALL msg=audit(1567679445.154:68): arch=c000003e syscall=59 success=yes exit=0 a0=7fff54ca4460 a1=bfad08 a2=bfaf80 a3=3 items=2 ppid=21142 pid=21144 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="as" exe="/usr/bin/x86_64-linux-gnu-as" key="exec"
+type=EXECVE msg=audit(1567679445.154:68): argc=5 a0="as" a1="--64" a2="-o" a3="/tmp/cclpbxMw.o" a4="/tmp/ccK1vx9T.s"
+type=CWD msg=audit(1567679445.154:68): cwd="/home/vagrant"
+type=PATH msg=audit(1567679445.154:68): item=0 name="/usr/bin/as" inode=12049 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679445.154:68): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679445.154:68): proctitle=676363006578706C6F69742E63002D6F006578706C6F6974
+type=SYSCALL msg=audit(1567679445.190:69): arch=c000003e syscall=59 success=yes exit=0 a0=c032b0 a1=c02db8 a2=bfb2a0 a3=c032b0 items=2 ppid=21142 pid=21145 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="collect2" exe="/usr/lib/gcc/x86_64-linux-gnu/7/collect2" key="exec"
+type=EXECVE msg=audit(1567679445.190:69): argc=51 a0="/usr/lib/gcc/x86_64-linux-gnu/7/collect2" a1="-plugin" a2="/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so" a3="-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper" a4="-plugin-opt=-fresolution=/tmp/ccWeagv9.res" a5="-plugin-opt=-pass-through=-lgcc" a6="-plugin-opt=-pass-through=-lgcc_s" a7="-plugin-opt=-pass-through=-lc" a8="-plugin-opt=-pass-through=-lgcc" a9="-plugin-opt=-pass-through=-lgcc_s" a10="--sysroot=/" a11="--build-id" a12="--eh-frame-hdr" a13="-m" a14="elf_x86_64" a15="--hash-style=gnu" a16="--as-needed" a17="-dynamic-linker" a18="/lib64/ld-linux-x86-64.so.2" a19="-pie" a20="-z" a21="now" a22="-z" a23="relro" a24="-o" a25="exploit" a26="/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o" a27="/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o" a28="/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o" a29="-L/usr/lib/gcc/x86_64-linux-gnu/7" a30="-L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu" a31="-L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib" a32="-L/lib/x86_64-linux-gnu" a33="-L/lib/../lib" a34="-L/usr/lib/x86_64-linux-gnu" a35="-L/usr/lib/../lib" a36="-L/usr/lib/gcc/x86_64-linux-gnu/7/../../.." a37="/tmp/cclpbxMw.o" a38="-lgcc" a39="--push-state" a40="--as-needed" a41="-lgcc_s" a42="--pop-state" a43="-lc" a44="-lgcc" a45="--push-state" a46="--as-needed" a47="-lgcc_s" a48="--pop-state" a49="/usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o" a50="/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o"
+type=CWD msg=audit(1567679445.190:69): cwd="/home/vagrant"
+type=PATH msg=audit(1567679445.190:69): item=0 name="/usr/lib/gcc/x86_64-linux-gnu/7/collect2" inode=260109 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679445.190:69): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679445.190:69): proctitle=2F7573722F6C69622F6763632F7838365F36342D6C696E75782D676E752F372F636F6C6C65637432002D706C7567696E002F7573722F6C69622F6763632F7838365F36342D6C696E75782D676E752F372F6C69626C746F5F706C7567696E2E736F002D706C7567696E2D6F70743D2F7573722F6C69622F6763632F7838365F36
+type=SYSCALL msg=audit(1567679445.194:70): arch=c000003e syscall=59 success=yes exit=0 a0=861620 a1=85fa50 a2=7fff20f1a998 a3=3 items=2 ppid=21145 pid=21146 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="ld" exe="/usr/bin/x86_64-linux-gnu-ld.bfd" key="exec"
+type=EXECVE msg=audit(1567679445.194:70): argc=51 a0="/usr/bin/ld" a1="-plugin" a2="/usr/lib/gcc/x86_64-linux-gnu/7/liblto_plugin.so" a3="-plugin-opt=/usr/lib/gcc/x86_64-linux-gnu/7/lto-wrapper" a4="-plugin-opt=-fresolution=/tmp/ccWeagv9.res" a5="-plugin-opt=-pass-through=-lgcc" a6="-plugin-opt=-pass-through=-lgcc_s" a7="-plugin-opt=-pass-through=-lc" a8="-plugin-opt=-pass-through=-lgcc" a9="-plugin-opt=-pass-through=-lgcc_s" a10="--sysroot=/" a11="--build-id" a12="--eh-frame-hdr" a13="-m" a14="elf_x86_64" a15="--hash-style=gnu" a16="--as-needed" a17="-dynamic-linker" a18="/lib64/ld-linux-x86-64.so.2" a19="-pie" a20="-z" a21="now" a22="-z" a23="relro" a24="-o" a25="exploit" a26="/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/Scrt1.o" a27="/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crti.o" a28="/usr/lib/gcc/x86_64-linux-gnu/7/crtbeginS.o" a29="-L/usr/lib/gcc/x86_64-linux-gnu/7" a30="-L/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu" a31="-L/usr/lib/gcc/x86_64-linux-gnu/7/../../../../lib" a32="-L/lib/x86_64-linux-gnu" a33="-L/lib/../lib" a34="-L/usr/lib/x86_64-linux-gnu" a35="-L/usr/lib/../lib" a36="-L/usr/lib/gcc/x86_64-linux-gnu/7/../../.." a37="/tmp/cclpbxMw.o" a38="-lgcc" a39="--push-state" a40="--as-needed" a41="-lgcc_s" a42="--pop-state" a43="-lc" a44="-lgcc" a45="--push-state" a46="--as-needed" a47="-lgcc_s" a48="--pop-state" a49="/usr/lib/gcc/x86_64-linux-gnu/7/crtendS.o" a50="/usr/lib/gcc/x86_64-linux-gnu/7/../../../x86_64-linux-gnu/crtn.o"
+type=CWD msg=audit(1567679445.194:70): cwd="/home/vagrant"
+type=PATH msg=audit(1567679445.194:70): item=0 name="/usr/bin/ld" inode=13787 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679445.194:70): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679445.194:70): proctitle=2F7573722F62696E2F6C64002D706C7567696E002F7573722F6C69622F6763632F7838365F36342D6C696E75782D676E752F372F6C69626C746F5F706C7567696E2E736F002D706C7567696E2D6F70743D2F7573722F6C69622F6763632F7838365F36342D6C696E75782D676E752F372F6C746F2D77726170706572002D706C
+type=SYSCALL msg=audit(1567679447.574:71): arch=c000003e syscall=59 success=yes exit=0 a0=55c77f4ff810 a1=55c77f632820 a2=55c77f501b20 a3=7 items=2 ppid=1881 pid=21147 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="exploit" exe="/home/vagrant/exploit" key="exec"
+type=EXECVE msg=audit(1567679447.574:71): argc=1 a0="./exploit"
+type=CWD msg=audit(1567679447.574:71): cwd="/home/vagrant"
+type=PATH msg=audit(1567679447.574:71): item=0 name="./exploit" inode=7145 dev=08:01 mode=0100775 ouid=1000 ogid=1000 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679447.574:71): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679447.574:71): proctitle="./exploit"
+type=SYSCALL msg=audit(1567679502.750:72): arch=c000003e syscall=59 success=yes exit=0 a0=55c77f635ce0 a1=55c77f631910 a2=55c77f501b20 a3=8 items=2 ppid=1881 pid=21149 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="openssl" exe="/usr/bin/openssl" key="exec"
+type=EXECVE msg=audit(1567679502.750:72): argc=1 a0="openssl"
+type=CWD msg=audit(1567679502.750:72): cwd="/home/vagrant"
+type=PATH msg=audit(1567679502.750:72): item=0 name="/usr/bin/openssl" inode=151 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679502.750:72): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679502.750:72): proctitle="openssl"
+type=SYSCALL msg=audit(1567679550.710:73): arch=c000003e syscall=59 success=yes exit=0 a0=55c77f5cc350 a1=55c77f62be20 a2=55c77f501b20 a3=8 items=2 ppid=1881 pid=21153 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="openssl" exe="/usr/bin/openssl" key="exec"
+type=EXECVE msg=audit(1567679550.710:73): argc=7 a0="openssl" a1="rc4-40" a2="-K" a3="7465737473" a4="-nosalt" a5="-e" a6="-nopad"
+type=CWD msg=audit(1567679550.710:73): cwd="/home/vagrant"
+type=PATH msg=audit(1567679550.710:73): item=0 name="/usr/bin/openssl" inode=151 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679550.710:73): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679550.710:73): proctitle=6F70656E73736C007263342D3430002D4B0037343635373337343733002D6E6F73616C74002D65002D6E6F706164
+type=SYSCALL msg=audit(1567679550.710:74): arch=c000003e syscall=59 success=yes exit=0 a0=55c77f5c97a0 a1=55c77f4d2ba0 a2=55c77f501b20 a3=8 items=2 ppid=1881 pid=21152 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="cat" exe="/bin/cat" key="exec"
+type=EXECVE msg=audit(1567679550.710:74): argc=2 a0="cat" a1="exploit"
+type=CWD msg=audit(1567679550.710:74): cwd="/home/vagrant"
+type=PATH msg=audit(1567679550.710:74): item=0 name="/bin/cat" inode=14 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679550.710:74): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679550.710:74): proctitle=636174006578706C6F6974
+type=SYSCALL msg=audit(1567679708.462:75): arch=c000003e syscall=59 success=yes exit=0 a0=55c77f61a8d0 a1=55c77f629870 a2=55c77f501b20 a3=1b6 items=2 ppid=1881 pid=21155 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="exploit" exe="/home/vagrant/exploit" key="exec"
+type=EXECVE msg=audit(1567679708.462:75): argc=1 a0="./exploit"
+type=CWD msg=audit(1567679708.462:75): cwd="/home/vagrant"
+type=PATH msg=audit(1567679708.462:75): item=0 name="./exploit" inode=7145 dev=08:01 mode=0100775 ouid=1000 ogid=1000 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679708.462:75): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679708.462:75): proctitle="./exploit"
+type=SYSCALL msg=audit(1567679720.790:76): arch=c000003e syscall=59 success=yes exit=0 a0=55c77f62b5e0 a1=55c77f62bdd0 a2=55c77f501b20 a3=8 items=2 ppid=1881 pid=21157 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="openssl" exe="/usr/bin/openssl" key="exec"
+type=EXECVE msg=audit(1567679720.790:76): argc=7 a0="openssl" a1="rc4-40" a2="-K" a3="7465737473" a4="-nosalt" a5="-e" a6="-nopad"
+type=CWD msg=audit(1567679720.790:76): cwd="/home/vagrant"
+type=PATH msg=audit(1567679720.790:76): item=0 name="/usr/bin/openssl" inode=151 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679720.790:76): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679720.790:76): proctitle=6F70656E73736C007263342D3430002D4B0037343635373337343733002D6E6F73616C74002D65002D6E6F706164
+type=SYSCALL msg=audit(1567679720.794:77): arch=c000003e syscall=59 success=yes exit=0 a0=55c77f4d2ba0 a1=55c77f631ee0 a2=55c77f501b20 a3=8 items=2 ppid=1881 pid=21156 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="cat" exe="/bin/cat" key="exec"
+type=EXECVE msg=audit(1567679720.794:77): argc=2 a0="cat" a1="xpl"
+type=CWD msg=audit(1567679720.794:77): cwd="/home/vagrant"
+type=PATH msg=audit(1567679720.794:77): item=0 name="/bin/cat" inode=14 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679720.794:77): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679720.794:77): proctitle=6361740078706C
+type=SYSCALL msg=audit(1567679735.034:78): arch=c000003e syscall=59 success=yes exit=0 a0=55c77f5707b0 a1=55c77f62bd80 a2=55c77f501b20 a3=8 items=2 ppid=1881 pid=21159 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="openssl" exe="/usr/bin/openssl" key="exec"
+type=EXECVE msg=audit(1567679735.034:78): argc=7 a0="openssl" a1="rc4-40" a2="-K" a3="7465737473" a4="-nosalt" a5="-e" a6="-nopad"
+type=CWD msg=audit(1567679735.034:78): cwd="/home/vagrant"
+type=PATH msg=audit(1567679735.034:78): item=0 name="/usr/bin/openssl" inode=151 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679735.034:78): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679735.034:78): proctitle=6F70656E73736C007263342D3430002D4B0037343635373337343733002D6E6F73616C74002D65002D6E6F706164
+type=SYSCALL msg=audit(1567679735.034:79): arch=c000003e syscall=59 success=yes exit=0 a0=55c77f62b160 a1=55c77f631ee0 a2=55c77f501b20 a3=8 items=2 ppid=1881 pid=21158 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="cat" exe="/bin/cat" key="exec"
+type=EXECVE msg=audit(1567679735.034:79): argc=2 a0="cat" a1="xpl"
+type=CWD msg=audit(1567679735.034:79): cwd="/home/vagrant"
+type=PATH msg=audit(1567679735.034:79): item=0 name="/bin/cat" inode=14 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679735.034:79): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679735.034:79): proctitle=6361740078706C
+type=SYSCALL msg=audit(1567679735.034:80): arch=c000003e syscall=59 success=yes exit=0 a0=55c77f632170 a1=55c77f631ee0 a2=55c77f501b20 a3=8 items=2 ppid=1881 pid=21160 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="xxd" exe="/usr/bin/xxd" key="exec"
+type=EXECVE msg=audit(1567679735.034:80): argc=1 a0="xxd"
+type=CWD msg=audit(1567679735.034:80): cwd="/home/vagrant"
+type=PATH msg=audit(1567679735.034:80): item=0 name="/usr/bin/xxd" inode=15334 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679735.034:80): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679735.034:80): proctitle="xxd"
+type=SYSCALL msg=audit(1567679777.902:81): arch=c000003e syscall=59 success=yes exit=0 a0=55c77f632640 a1=55c77f631e20 a2=55c77f501b20 a3=8 items=2 ppid=1881 pid=21161 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="xxd" exe="/usr/bin/xxd" key="exec"
+type=EXECVE msg=audit(1567679777.902:81): argc=2 a0="xxd" a1="xpl"
+type=CWD msg=audit(1567679777.902:81): cwd="/home/vagrant"
+type=PATH msg=audit(1567679777.902:81): item=0 name="/usr/bin/xxd" inode=15334 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679777.902:81): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679777.902:81): proctitle=7878640078706C
+type=SYSCALL msg=audit(1567679787.922:82): arch=c000003e syscall=59 success=yes exit=0 a0=55c77f633e60 a1=55c77f638ff0 a2=55c77f501b20 a3=1b6 items=2 ppid=1881 pid=21163 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="openssl" exe="/usr/bin/openssl" key="exec"
+type=SYSCALL msg=audit(1567679787.922:83): arch=c000003e syscall=59 success=yes exit=0 a0=55c77f62b5e0 a1=55c77f62b580 a2=55c77f501b20 a3=8 items=2 ppid=1881 pid=21162 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="cat" exe="/bin/cat" key="exec"
+type=EXECVE msg=audit(1567679787.922:83): argc=2 a0="cat" a1="xpl"
+type=CWD msg=audit(1567679787.922:83): cwd="/home/vagrant"
+type=EXECVE msg=audit(1567679787.922:82): argc=7 a0="openssl" a1="rc4-40" a2="-K" a3="7465737473" a4="-nosalt" a5="-e" a6="-nopad"
+type=CWD msg=audit(1567679787.922:82): cwd="/home/vagrant"
+type=PATH msg=audit(1567679787.922:82): item=0 name="/usr/bin/openssl" inode=151 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679787.922:82): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679787.922:82): proctitle=6F70656E73736C007263342D3430002D4B0037343635373337343733002D6E6F73616C74002D65002D6E6F706164
+type=PATH msg=audit(1567679787.922:83): item=0 name="/bin/cat" inode=14 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679787.922:83): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679787.922:83): proctitle=6361740078706C
+type=SYSCALL msg=audit(1567679790.394:84): arch=c000003e syscall=59 success=yes exit=0 a0=55c77f632820 a1=55c77f632640 a2=55c77f501b20 a3=8 items=2 ppid=1881 pid=21164 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="xxd" exe="/usr/bin/xxd" key="exec"
+type=EXECVE msg=audit(1567679790.394:84): argc=2 a0="xxd" a1="xpl2"
+type=CWD msg=audit(1567679790.394:84): cwd="/home/vagrant"
+type=PATH msg=audit(1567679790.394:84): item=0 name="/usr/bin/xxd" inode=15334 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679790.394:84): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679790.394:84): proctitle=7878640078706C32
+type=SYSCALL msg=audit(1567679795.818:85): arch=c000003e syscall=59 success=yes exit=0 a0=55c77f632700 a1=55c77f5e6d20 a2=55c77f501b20 a3=8 items=2 ppid=1881 pid=21165 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="hexdump" exe="/usr/bin/hexdump" key="exec"
+type=EXECVE msg=audit(1567679795.818:85): argc=3 a0="hexdump" a1="-C" a2="xpl2"
+type=CWD msg=audit(1567679795.818:85): cwd="/home/vagrant"
+type=PATH msg=audit(1567679795.818:85): item=0 name="/usr/bin/hexdump" inode=4415 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679795.818:85): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679795.818:85): proctitle=68657864756D70002D430078706C32
+type=SYSCALL msg=audit(1567679823.862:86): arch=c000003e syscall=59 success=yes exit=0 a0=55c77f5b00e0 a1=55c77f635570 a2=55c77f501b20 a3=8 items=2 ppid=1881 pid=21166 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="python" exe="/usr/bin/python2.7" key="exec"
+type=EXECVE msg=audit(1567679823.862:86): argc=3 a0="python" a1="-c" a2="open('xpl2').read().encode('hex')"
+type=CWD msg=audit(1567679823.862:86): cwd="/home/vagrant"
+type=PATH msg=audit(1567679823.862:86): item=0 name="/usr/bin/python" inode=1887 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679823.862:86): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679823.862:86): proctitle=707974686F6E002D63006F70656E282778706C3227292E7265616428292E656E636F646528276865782729
+type=SYSCALL msg=audit(1567679829.618:87): arch=c000003e syscall=59 success=yes exit=0 a0=55c77f632820 a1=55c77f639060 a2=55c77f501b20 a3=8 items=2 ppid=1881 pid=21167 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="python" exe="/usr/bin/python2.7" key="exec"
+type=EXECVE msg=audit(1567679829.618:87): argc=3 a0="python" a1="-c" a2=7072696E74206F70656E282778706C3227292E7265616428292E656E636F646528276865782729
+type=CWD msg=audit(1567679829.618:87): cwd="/home/vagrant"
+type=PATH msg=audit(1567679829.618:87): item=0 name="/usr/bin/python" inode=1887 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679829.618:87): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679829.618:87): proctitle=707974686F6E002D63007072696E74206F70656E282778706C3227292E7265616428292E656E636F646528276865782729
+type=SYSCALL msg=audit(1567679861.158:88): arch=c000003e syscall=59 success=yes exit=0 a0=55c77f62b580 a1=55c77f6308c0 a2=55c77f501b20 a3=8 items=2 ppid=1881 pid=21168 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="ls" exe="/bin/ls" key="exec"
+type=EXECVE msg=audit(1567679861.158:88): argc=3 a0="ls" a1="--color=auto" a2="-alt"
+type=CWD msg=audit(1567679861.158:88): cwd="/home/vagrant"
+type=PATH msg=audit(1567679861.158:88): item=0 name="/bin/ls" inode=26 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679861.158:88): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679861.158:88): proctitle=6C73002D2D636F6C6F723D6175746F002D616C74
+type=SYSCALL msg=audit(1567679866.010:89): arch=c000003e syscall=59 success=yes exit=0 a0=55c77f632700 a1=55c77f6397d0 a2=55c77f501b20 a3=8 items=2 ppid=1881 pid=21169 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="python" exe="/usr/bin/python2.7" key="exec"
+type=EXECVE msg=audit(1567679866.010:89): argc=1 a0="python"
+type=CWD msg=audit(1567679866.010:89): cwd="/home/vagrant"
+type=PATH msg=audit(1567679866.010:89): item=0 name="/usr/bin/python" inode=1887 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679866.010:89): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679866.010:89): proctitle="python"
+type=SYSCALL msg=audit(1567679873.998:90): arch=c000003e syscall=59 success=yes exit=0 a0=55c77f633680 a1=55c77f631ea0 a2=55c77f501b20 a3=7 items=2 ppid=1881 pid=21170 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="cat" exe="/bin/cat" key="exec"
+type=EXECVE msg=audit(1567679873.998:90): argc=2 a0="cat" a1="/etc/passwd"
+type=CWD msg=audit(1567679873.998:90): cwd="/home/vagrant"
+type=PATH msg=audit(1567679873.998:90): item=0 name="/bin/cat" inode=14 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679873.998:90): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679873.998:90): proctitle=636174002F6574632F706173737764
+type=SYSCALL msg=audit(1567679875.830:91): arch=c000003e syscall=59 success=yes exit=0 a0=55c77f506960 a1=55c77f635c20 a2=55c77f501b20 a3=8 items=2 ppid=1881 pid=21171 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="date" exe="/bin/date" key="exec"
+type=EXECVE msg=audit(1567679875.830:91): argc=1 a0="date"
+type=CWD msg=audit(1567679875.830:91): cwd="/home/vagrant"
+type=PATH msg=audit(1567679875.830:91): item=0 name="/bin/date" inode=19 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679875.830:91): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679875.830:91): proctitle="date"
+type=SYSCALL msg=audit(1567679885.754:92): arch=c000003e syscall=59 success=yes exit=0 a0=55c77f501110 a1=55c77f633f90 a2=55c77f501b20 a3=8 items=2 ppid=1881 pid=21173 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="grep" exe="/bin/grep" key="exec"
+type=EXECVE msg=audit(1567679885.754:92): argc=3 a0="grep" a1="--color=auto" a2=".c"
+type=CWD msg=audit(1567679885.754:92): cwd="/"
+type=PATH msg=audit(1567679885.754:92): item=0 name="/bin/grep" inode=51 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679885.754:92): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679885.754:92): proctitle=67726570002D2D636F6C6F723D6175746F002E63
+type=SYSCALL msg=audit(1567679885.754:93): arch=c000003e syscall=59 success=yes exit=0 a0=55c77f636100 a1=55c77f63c3c0 a2=55c77f501b20 a3=8 items=2 ppid=1881 pid=21172 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="find" exe="/usr/bin/find" key="exec"
+type=EXECVE msg=audit(1567679885.754:93): argc=2 a0="find" a1="."
+type=CWD msg=audit(1567679885.754:93): cwd="/"
+type=PATH msg=audit(1567679885.754:93): item=0 name="/usr/bin/find" inode=4096 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679885.754:93): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679885.754:93): proctitle=66696E64002E
+type=SYSCALL msg=audit(1567679892.686:94): arch=c000003e syscall=59 success=yes exit=0 a0=55c77f628c80 a1=55c77f63c3c0 a2=55c77f501b20 a3=8 items=2 ppid=1881 pid=21175 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="find" exe="/usr/bin/find" key="exec"
+type=SYSCALL msg=audit(1567679892.686:95): arch=c000003e syscall=59 success=yes exit=0 a0=55c77f634090 a1=55c77f633900 a2=55c77f501b20 a3=8 items=2 ppid=1881 pid=21176 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="grep" exe="/bin/grep" key="exec"
+type=EXECVE msg=audit(1567679892.686:95): argc=3 a0="grep" a1="--color=auto" a2="xpl"
+type=CWD msg=audit(1567679892.686:95): cwd="/"
+type=PATH msg=audit(1567679892.686:95): item=0 name="/bin/grep" inode=51 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679892.686:95): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679892.686:95): proctitle=67726570002D2D636F6C6F723D6175746F0078706C
+type=EXECVE msg=audit(1567679892.686:94): argc=2 a0="find" a1="."
+type=CWD msg=audit(1567679892.686:94): cwd="/"
+type=PATH msg=audit(1567679892.686:94): item=0 name="/usr/bin/find" inode=4096 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679892.686:94): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679892.686:94): proctitle=66696E64002E
+type=SYSCALL msg=audit(1567679899.770:96): arch=c000003e syscall=59 success=yes exit=0 a0=55c77f6288b0 a1=55c77f629e30 a2=55c77f501b20 a3=8 items=2 ppid=1881 pid=21177 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="ls" exe="/bin/ls" key="exec"
+type=EXECVE msg=audit(1567679899.770:96): argc=3 a0="ls" a1="--color=auto" a2="-alt"
+type=CWD msg=audit(1567679899.770:96): cwd="/tmp"
+type=PATH msg=audit(1567679899.770:96): item=0 name="/bin/ls" inode=26 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679899.770:96): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679899.770:96): proctitle=6C73002D2D636F6C6F723D6175746F002D616C74
+type=SYSCALL msg=audit(1567679970.890:97): arch=c000003e syscall=59 success=yes exit=0 a0=55c77f635c80 a1=55c77f5933f0 a2=55c77f501b20 a3=1b6 items=2 ppid=1881 pid=21178 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="python" exe="/usr/bin/python2.7" key="exec"
+type=EXECVE msg=audit(1567679970.890:97): argc=3 a0="python" a1="-c" a2=7072696E7420276561623431646664663733303536616631353561616530623661656566393333323634613230656463316236393731383539613630656330643735333038343232313933333733613332303662333836613766383961663833643035656435666564272E6465636F646528276865782729
+type=CWD msg=audit(1567679970.890:97): cwd="/tmp"
+type=PATH msg=audit(1567679970.890:97): item=0 name="/usr/bin/python" inode=1887 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679970.890:97): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679970.890:97): proctitle=707974686F6E002D63007072696E7420276561623431646664663733303536616631353561616530623661656566393333323634613230656463316236393731383539613630656330643735333038343232313933333733613332303662333836613766383961663833643035656435666564272E6465636F64652827686578
+type=SYSCALL msg=audit(1567679972.942:98): arch=c000003e syscall=59 success=yes exit=0 a0=55c77f6335c0 a1=55c77f634c10 a2=55c77f501b20 a3=7 items=2 ppid=1881 pid=21179 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="cat" exe="/bin/cat" key="exec"
+type=EXECVE msg=audit(1567679972.942:98): argc=2 a0="cat" a1="xpl"
+type=CWD msg=audit(1567679972.942:98): cwd="/tmp"
+type=PATH msg=audit(1567679972.942:98): item=0 name="/bin/cat" inode=14 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679972.942:98): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679972.942:98): proctitle=6361740078706C
+type=SYSCALL msg=audit(1567679978.702:99): arch=c000003e syscall=59 success=yes exit=0 a0=55c77f634090 a1=55c77f628d40 a2=55c77f501b20 a3=8 items=2 ppid=1881 pid=21180 auid=1000 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="file" exe="/usr/bin/file" key="exec"
+type=EXECVE msg=audit(1567679978.702:99): argc=2 a0="file" a1="xpl"
+type=CWD msg=audit(1567679978.702:99): cwd="/tmp"
+type=PATH msg=audit(1567679978.702:99): item=0 name="/usr/bin/file" inode=4313 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679978.702:99): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679978.702:99): proctitle=66696C650078706C
+type=SYSCALL msg=audit(1567679980.654:100): arch=c000003e syscall=59 success=yes exit=0 a0=55c77f629aa0 a1=55c77f634190 a2=55c77f501b20 a3=8 items=2 ppid=1881 pid=21181 auid=1000 uid=1000 gid=1000 euid=0 suid=0 fsuid=0 egid=1000 sgid=1000 fsgid=1000 tty=pts0 ses=3 comm="sudo" exe="/usr/bin/sudo" key="exec"
+type=EXECVE msg=audit(1567679980.654:100): argc=2 a0="sudo" a1="su"
+type=CWD msg=audit(1567679980.654:100): cwd="/tmp"
+type=PATH msg=audit(1567679980.654:100): item=0 name="/usr/bin/sudo" inode=4359 dev=08:01 mode=0104755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679980.654:100): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679980.654:100): proctitle=7375646F007375
+type=USER_CMD msg=audit(1567679980.658:101): pid=21181 uid=1000 auid=1000 ses=3 msg='cwd="/tmp" cmd="su" terminal=pts/0 res=success'
+type=CRED_REFR msg=audit(1567679980.658:102): pid=21181 uid=0 auid=1000 ses=3 msg='op=PAM:setcred acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+type=USER_START msg=audit(1567679980.658:103): pid=21181 uid=0 auid=1000 ses=3 msg='op=PAM:session_open acct="root" exe="/usr/bin/sudo" hostname=? addr=? terminal=/dev/pts/0 res=success'
+type=SYSCALL msg=audit(1567679980.658:104): arch=c000003e syscall=59 success=yes exit=0 a0=560116732f48 a1=560116741128 a2=560116739190 a3=0 items=2 ppid=21181 pid=21182 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="su" exe="/bin/su" key="exec"
+type=EXECVE msg=audit(1567679980.658:104): argc=1 a0="su"
+type=CWD msg=audit(1567679980.658:104): cwd="/tmp"
+type=PATH msg=audit(1567679980.658:104): item=0 name="/bin/su" inode=98 dev=08:01 mode=0104755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679980.658:104): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679980.658:104): proctitle="su"
+type=USER_AUTH msg=audit(1567679980.662:105): pid=21182 uid=0 auid=1000 ses=3 msg='op=PAM:authentication acct="root" exe="/bin/su" hostname=? addr=? terminal=/dev/pts/0 res=success'
+type=USER_ACCT msg=audit(1567679980.662:106): pid=21182 uid=0 auid=1000 ses=3 msg='op=PAM:accounting acct="root" exe="/bin/su" hostname=? addr=? terminal=/dev/pts/0 res=success'
+type=CRED_ACQ msg=audit(1567679980.662:107): pid=21182 uid=0 auid=1000 ses=3 msg='op=PAM:setcred acct="root" exe="/bin/su" hostname=? addr=? terminal=/dev/pts/0 res=success'
+type=USER_START msg=audit(1567679980.662:108): pid=21182 uid=0 auid=1000 ses=3 msg='op=PAM:session_open acct="root" exe="/bin/su" hostname=? addr=? terminal=/dev/pts/0 res=success'
+type=USER_ROLE_CHANGE msg=audit(1567679980.662:109): pid=21183 uid=0 auid=1000 ses=3 msg='op=su acct="root" exe="/bin/su" hostname=localhost addr=127.0.0.1 terminal=/dev/pts/0 res=success'
+type=SYSCALL msg=audit(1567679980.662:110): arch=c000003e syscall=59 success=yes exit=0 a0=562425705140 a1=7ffd52be26d0 a2=5624256fba50 a3=7ffd52be2760 items=2 ppid=21182 pid=21183 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="bash" exe="/bin/bash" key="exec"
+type=EXECVE msg=audit(1567679980.662:110): argc=1 a0="bash"
+type=CWD msg=audit(1567679980.662:110): cwd="/tmp"
+type=PATH msg=audit(1567679980.662:110): item=0 name="/bin/bash" inode=32 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679980.662:110): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679980.662:110): proctitle="bash"
+type=SYSCALL msg=audit(1567679980.666:111): arch=c000003e syscall=59 success=yes exit=0 a0=5594a2f01840 a1=5594a2f01010 a2=5594a2efe350 a3=8 items=2 ppid=21184 pid=21185 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="groups" exe="/usr/bin/groups" key="exec"
+type=EXECVE msg=audit(1567679980.666:111): argc=1 a0="groups"
+type=CWD msg=audit(1567679980.666:111): cwd="/tmp"
+type=PATH msg=audit(1567679980.666:111): item=0 name="/usr/bin/groups" inode=4166 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679980.666:111): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679980.666:111): proctitle="groups"
+type=SYSCALL msg=audit(1567679980.666:112): arch=c000003e syscall=59 success=yes exit=0 a0=5594a2f00920 a1=5594a2eff900 a2=5594a2eff690 a3=5594a2eef010 items=3 ppid=21186 pid=21187 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="lesspipe" exe="/bin/dash" key="exec"
+type=EXECVE msg=audit(1567679980.666:112): argc=2 a0="/bin/sh" a1="/usr/bin/lesspipe"
+type=CWD msg=audit(1567679980.666:112): cwd="/tmp"
+type=PATH msg=audit(1567679980.666:112): item=0 name="/usr/bin/lesspipe" inode=132 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679980.666:112): item=1 name="/bin/sh" inode=27 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679980.666:112): item=2 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679980.666:112): proctitle=2F62696E2F7368002F7573722F62696E2F6C65737370697065
+type=SYSCALL msg=audit(1567679980.670:113): arch=c000003e syscall=59 success=yes exit=0 a0=558411fb9860 a1=558410bd7c00 a2=558411fb97c8 a3=558411fb9010 items=2 ppid=21187 pid=21188 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="basename" exe="/usr/bin/basename" key="exec"
+type=EXECVE msg=audit(1567679980.670:113): argc=2 a0="basename" a1="/usr/bin/lesspipe"
+type=CWD msg=audit(1567679980.670:113): cwd="/tmp"
+type=PATH msg=audit(1567679980.670:113): item=0 name="/usr/bin/basename" inode=4080 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679980.670:113): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679980.670:113): proctitle=626173656E616D65002F7573722F62696E2F6C65737370697065
+type=SYSCALL msg=audit(1567679980.670:114): arch=c000003e syscall=59 success=yes exit=0 a0=558411fc4ab0 a1=558411fc49e0 a2=558411fc4a18 a3=558411fb9010 items=2 ppid=21189 pid=21190 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="dirname" exe="/usr/bin/dirname" key="exec"
+type=EXECVE msg=audit(1567679980.670:114): argc=2 a0="dirname" a1="/usr/bin/lesspipe"
+type=CWD msg=audit(1567679980.670:114): cwd="/tmp"
+type=PATH msg=audit(1567679980.670:114): item=0 name="/usr/bin/dirname" inode=4155 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679980.670:114): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679980.670:114): proctitle=6469726E616D65002F7573722F62696E2F6C65737370697065
+type=SYSCALL msg=audit(1567679980.674:115): arch=c000003e syscall=59 success=yes exit=0 a0=5594a2efeb60 a1=5594a2efed30 a2=5594a2efe7b0 a3=5594a2eef010 items=2 ppid=21191 pid=21192 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="dircolors" exe="/usr/bin/dircolors" key="exec"
+type=EXECVE msg=audit(1567679980.674:115): argc=2 a0="dircolors" a1="-b"
+type=CWD msg=audit(1567679980.674:115): cwd="/tmp"
+type=PATH msg=audit(1567679980.674:115): item=0 name="/usr/bin/dircolors" inode=4154 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679980.674:115): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679980.674:115): proctitle=646972636F6C6F7273002D62
+type=SYSCALL msg=audit(1567679987.214:116): arch=c000003e syscall=59 success=yes exit=0 a0=5594a2f2a0d0 a1=5594a2f05af0 a2=5594a2f05830 a3=5594a2eef010 items=2 ppid=21183 pid=21193 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="cat" exe="/bin/cat" key="exec"
+type=EXECVE msg=audit(1567679987.214:116): argc=2 a0="cat" a1="audit/"
+type=CWD msg=audit(1567679987.214:116): cwd="/var/log"
+type=PATH msg=audit(1567679987.214:116): item=0 name="/bin/cat" inode=14 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679987.214:116): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679987.214:116): proctitle=6361740061756469742F
+type=SYSCALL msg=audit(1567679993.898:117): arch=c000003e syscall=59 success=yes exit=0 a0=5594a2f04880 a1=5594a2f2b120 a2=5594a2f05830 a3=5594a2eef010 items=2 ppid=21183 pid=21194 auid=1000 uid=0 gid=0 euid=0 suid=0 fsuid=0 egid=0 sgid=0 fsgid=0 tty=pts0 ses=3 comm="cat" exe="/bin/cat" key="exec"
+type=EXECVE msg=audit(1567679993.898:117): argc=2 a0="cat" a1="audit.log"
+type=CWD msg=audit(1567679993.898:117): cwd="/var/log/audit"
+type=PATH msg=audit(1567679993.898:117): item=0 name="/bin/cat" inode=14 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PATH msg=audit(1567679993.898:117): item=1 name="/lib64/ld-linux-x86-64.so.2" inode=2075 dev=08:01 mode=0100755 ouid=0 ogid=0 rdev=00:00 nametype=NORMAL cap_fp=0000000000000000 cap_fi=0000000000000000 cap_fe=0 cap_fver=0
+type=PROCTITLE msg=audit(1567679993.898:117): proctitle=6361740061756469742E6C6F67

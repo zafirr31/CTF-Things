@@ -2,9 +2,9 @@
 
 # Cyber Jawara 2019 Qualifiers
 
-For all source code and binaries see attachments folder
+For all source code and binaries see archive folder
 
-Problems me and my team solved (Including upsolves). In this repo i will only explain binex and reversing problems
+Problems me and my team solved (Including upsolves). In this WU i will only explain binex and reversing problems
 * Starlight (Binary Exploitation)
 * Noir (Binary Exploitation)
 * Homelander (Binary Exploitation)
@@ -88,8 +88,7 @@ the function can be accessed with gdb, because the asm is long i wont post a pic
 
 ![](images/gowon.png)
 
-This function in short just takes 4 arrays, our input, A, B, and C and does a simple manipulation
-
+This function in short just takes 4 arrays, our input, A, B, and C and does a simple manipulation\
 The equations ends up being (input - a) ^ b == c\
 If the equation is true then the input is the flag\
 So the flag is (c ^ b) + a
@@ -99,9 +98,9 @@ Flag: CJ2019{cR34tInG_sh377c0de_iN_ASM_i5_FUN}
 
 ### hyunjin (upsolve)
 
-Web assembly reversing
-I've never read wasm before but this wasnt too hard
-The full asm file can be found in the archive
+Web assembly reversing\
+I've never read wasm before but this wasnt too hard\
+The full asm file can be found in the archive\
 Disassembly was done with wasmdump and wasm module in python
 
 The code is basically calculates the "xth" fibonacci number, where x is the ordinal value of each character in our input. However, something to note is that the wasm file used unsigned 64-bit integers, so i used the ctypes module in python
